@@ -26,7 +26,7 @@ function createBarChart(sampleData) {
   };
 
   const layout = {
-    title: 'Top 10 OTUs Found',
+    title: '<b>Top 10 OTUs Found</b>',
     yaxis: {
       tickmode: 'linear'
     }
@@ -51,7 +51,7 @@ function createBubbleChart(sampleData) {
   };
 
   const layout = {
-    title: 'Sample Biodiversity',
+    title: '<b>Sample Biodiversity</b>',
     xaxis: { title: 'OTU ID' }
   };
 
@@ -82,11 +82,15 @@ function optionChanged(selectedSampleID) {
       createBarChart(selectedSampleData);
       createBubbleChart(selectedSampleData);
       displayMetadata(selectedMetadata);
+
+      // Update the gauge chart
+      updateGaugeChart(selectedMetadata.wfreq);
     })
     .catch(function(error) {
       console.error("Error fetching data:", error);
     });
 }
+
 
 // Function to initialize the dashboard
 function init() {
