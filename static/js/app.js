@@ -17,7 +17,7 @@ function createBarChart(sampleData) {
   const hovertext = sampleData.otu_labels.slice(0, 10).reverse();
 
   // Create the bar chart
-  const trace = {
+  const bar_trace = {
     x: sortedData,
     y: otuLabels,
     text: hovertext,
@@ -25,20 +25,20 @@ function createBarChart(sampleData) {
     orientation: 'h'
   };
 
-  const layout = {
+  const bar_layout = {
     title: '<b>Top 10 OTUs Found</b>',
     yaxis: {
       tickmode: 'linear'
     }
   };
 
-  Plotly.newPlot('bar', [trace], layout);
+  Plotly.newPlot('bar', [bar_trace], bar_layout);
 }
 
 // Function to create the bubble chart
 function createBubbleChart(sampleData) {
   // Create the bubble chart
-  const trace = {
+  const bubble_trace = {
     x: sampleData.otu_ids,
     y: sampleData.sample_values,
     text: sampleData.otu_labels,
@@ -46,16 +46,16 @@ function createBubbleChart(sampleData) {
     marker: {
       size: sampleData.sample_values,
       color: sampleData.otu_ids,
-      colorscale: 'Viridis'
+      colorscale: 'Earth'
     }
   };
 
-  const layout = {
+  const bubble_layout = {
     title: '<b>Sample Biodiversity</b>',
     xaxis: { title: 'OTU ID' }
   };
 
-  Plotly.newPlot('bubble', [trace], layout);
+  Plotly.newPlot('bubble', [bubble_trace], bubble_layout);
 }
 
 // Function to display metadata

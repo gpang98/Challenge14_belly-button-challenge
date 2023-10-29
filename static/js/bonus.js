@@ -1,6 +1,6 @@
 function createGaugeChart(washingFrequency) {
   // Set up gauge chart data with the requested color format
-  var data = [
+  var gauge_data = [
     {
       type: 'indicator',
       mode: 'gauge+number',
@@ -24,7 +24,7 @@ function createGaugeChart(washingFrequency) {
   ];
 
   // Set up gauge chart layout
-  var layout = {
+  var gauge_layout = {
     width: 400,
     height: 400,
     margin: { t: 25, r: 25, l: 25, b: 25 },
@@ -52,7 +52,7 @@ function createGaugeChart(washingFrequency) {
   };
 
   // Create the gauge chart
-  Plotly.newPlot('gauge', data, layout);
+  Plotly.newPlot('gauge', gauge_data, gauge_layout);
 }
 
 function updateGaugeChart(washingFrequency) {
