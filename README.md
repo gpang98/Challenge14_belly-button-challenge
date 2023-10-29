@@ -4,6 +4,8 @@ Module 14 Challenge - UWA/edX Data Analytics Bootcamp
 
 Github repository at: [https://github.com/gpang98/Challenge14_belly-button-challenge.git](https://github.com/gpang98/Challenge14_belly-button-challenge.git)
 
+Github Pages is deployed at: [https://gpang98.github.io/Challenge14_belly-button-challenge/](https://gpang98.github.io/Challenge14_belly-button-challenge/)
+
 
 ## Table of Contents
 1. [Introduction](https://github.com/gpang98/Challenge14_belly-button-challenge/tree/main#introduction) -->
@@ -51,7 +53,7 @@ Belly Button Biodiversity: [http://robdunnlab.com/projects/belly-button-biodiver
 
 ### `app.js` Script
 1. `populateDropdown()`
-    - populate the dropdown based on the subject ID in the pre-defined id#selDataset
+    - populate the dropdown based on the subject ID in the pre-defined id#selDataset in the html file.
 
 2. `createBarChart()`
     - Create the bar chart:
@@ -68,12 +70,12 @@ Belly Button Biodiversity: [http://robdunnlab.com/projects/belly-button-biodiver
 
 2. `displayMetadata()`
     - Select the `#sample-metadata` object which refers to the "demographic info" box.
-    - Use `panel.html('') to clear existing display in the box.
-    - Iterate through each key-value pair in the metadata and display it
+    - Use `panel.html('')` to clear existing display in the box.
+    - Iterate through each key-value pair in the metadata and display it.
 
 3. `optionChanged()`
     - This function repopulate the `selectedSampleData`, `selectedMedata` using `find()`. 
-    his function is predefined as per the `selDataset`'s `onchange` attribute in the html file.
+    - This function is predefined as per the `selDataset`'s `onchange` attribute in the html file.
     - The function calls the `createBarChart()` and `createBubbleChart()` and `displayMetadata` functions to update the plots when a new subject ID is chosen in the dropdown.
     - The `updateGaugeChart()` function is also called from `bonus.js` to create the indicator.
     - return error if no data are fetched.
@@ -85,7 +87,7 @@ Belly Button Biodiversity: [http://robdunnlab.com/projects/belly-button-biodiver
     - return error if no data are fetched.
 
 ### `bonus.js` Script
-1. The `gauge_data` to plot are defined.  (Please note this gauge didn't matched the sampel provided but close enough).
+1. The `gauge_data` to plot are defined.  (Please note this gauge didn't matched the sample provided but close enough).
     - `type` = indicator with mode = 'gauge+number'
     - 9 segments are defined and colors are assigned from Light yelllow to Black
 
