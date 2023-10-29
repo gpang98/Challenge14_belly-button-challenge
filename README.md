@@ -98,6 +98,7 @@ Belly Button Biodiversity: [http://robdunnlab.com/projects/belly-button-biodiver
 
 
 ## References
-The codes used are derived primarily from the lecture notes and ChatGPT.
+1. The codes used are derived primarily from the lecture notes and ChatGPT.
+2. Deploying to GitHub Pages [https://www.codecademy.com/article/f1-u3-github-pages#](https://www.codecademy.com/article/f1-u3-github-pages#)
 
 
